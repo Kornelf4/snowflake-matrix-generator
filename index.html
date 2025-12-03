@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(7, 7, 82);
+        }
+        canvas {
+            border: 5px solid black;
+            image-rendering: pixelated;
+        }
+        .button-7 {
+        background-color: #0095ff;
+        border: 1px solid transparent;
+        border-radius: 3px;
+        box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.15385;
+        margin: 0;
+        outline: none;
+        padding: 8px .8em;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
+        white-space: nowrap;
+        }
+
+        .button-7:hover,
+        .button-7:focus {
+        background-color: #07c;
+        }
+
+        .button-7:focus {
+        box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+        }
+
+        .button-7:active {
+        background-color: #0064bd;
+        box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="button-7" role="button" onclick="demoGen(50)">Generate</button>
+    <div class="canvasCont"></div>
+</body>
+</html>
+<script src="snowflakeGen.js"></script>
+<script>
+    //exaple usage
+    function demoGen(n) {
+        let canvasContainer = document.getElementsByClassName("canvasCont")[0];
+        canvasContainer.innerHTML = "";
+        let canvasSize = 100;
+        for(let i = 0; i < n; i++) {
+            let newCanvas = document.createElement("canvas");
+            newCanvas.width = canvasSize;
+            newCanvas.height = canvasSize;
+            canvasContainer.appendChild(newCanvas);
+            let ctx = newCanvas.getContext("2d");
+            draw2dArray(ctx, 0, 0, canvasSize, generateNew(getRandomIntegerInclusive(10, 15) * 2));
+        }
+    }
+    demoGen(50);
+</script>
