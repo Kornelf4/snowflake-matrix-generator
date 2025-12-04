@@ -2,9 +2,16 @@
 > This small project was used in my procjam [submission](https://kornelf.itch.io/the-silent-plane) in 2025.
 
 ## Usage
-You can easily use this in your JavaScript project, it you copy or download the contents of the file `snowflakeGen.js`.\n
-If you want to generate a new matrix containing the colors at different posititions, call the `generateNew(s)` function with the size of the square matrix you want it to return. \n
-If you want to draw a matrix like that on a canvas you have to call the `draw2dArray(contex, x, y, displaySize, DArray)` function, where the context is the context of the canvas you want to draw on, the x and y are the position of the snowflake image on the given canvas in pixel, displaySize is the size of the snowflake in pixel, DArray is the color matrix of the snowflake. \n
+You can easily use this in your JavaScript project, it you copy or download the contents of the file `snowflakeGen.js`.
+
+If you want to generate a new matrix containing the colors at different posititions, call the `generateNew(s)` function with the size of the square matrix you want it to return. 
+
+If you want to draw a matrix like that on a canvas you have to call the `draw2dArray(contex, x, y, displaySize, DArray)` function, where the parameters are:
+- `context` is the context of the canvas you want to draw on, the 
+- `x` and `y` are the position of the snowflake image on the given canvas in pixel, 
+- `displaySize` is the size of the snowflake in pixel, 
+- `DArray` is the color matrix of the snowflake.
+
 Exaple usage (can be found is the `index.html` file):
 ```javascript
 let canvasContainer = document.getElementsByClassName("canvasCont")[0];
