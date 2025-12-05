@@ -1,6 +1,8 @@
 # Snowflake generator
 > This small project was used in my procjam [submission](https://kornelf.itch.io/the-silent-plane) in 2025.
 
+> You can view some rendered example result matrices in the `exaples` folder.
+
 ## Usage
 You can easily use this in your JavaScript project, it you copy or download the contents of the file `snowflakeGen.js`.
 
@@ -42,3 +44,6 @@ demoGen(50);
 8. Repeat the move-paint cicle already calcuzlated times.
 9. this was one stroke. Repeat from 3. step the calculated times.
 10. Return the resulting matrix.
+
+> [!NOTE]
+> This (or any of my other projects) _does not_ contain outputs of any generative AI.
